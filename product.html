@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | BookWorm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="webpage.html" class="logo-link">
+                    <h1>
+                        <img src="logo.jpg" style="vertical-align: middle; height: 80px; padding: 10px;  border-radius: 50px;">
+                    </h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="webpage.html">Home</a></li>
+                <li><a href="product.html" class="active">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="form.html">Login</a></li>
+                <div class="icon-cart">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                    </svg>
+                    <span>0</span>
+                </div>
+                <div class="cartTab">
+                    <h1>Shopping Cart</h1>
+                    <div class="listCart">
+                        
+                    </div>
+                    <div class="btn">
+                        <button class="close">CLOSE</button>
+                        <a href="cart.html" class="checkOut">Check Out</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="products-section">
+        <h2>Our Products</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="classmate.jpg" alt="Notebook 1" class="product-image" 
+                onclick="redirectToDetails('Premium Notebook', 299, 'classmate.jpg', 'Perfect for students and professionals.')">
+                <h3 class="product-name">Premium Notebook</h3>
+                <p class="product-description">Perfect for students and professionals.</p>
+                <p class="product-price">₹299</p>
+                <button class="buy-button" data-name="Premium Notebook" data-price="299" data-image="classmate.jpg">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="spiral.jpg" alt="Notebook 2" class="product-image">
+                <h3 class="product-name">Spiral Journal</h3>
+                <p class="product-description">Keep track of your daily tasks with ease.</p>
+                <p class="product-price">₹249</p>
+                <button class="buy-button" data-name="Spiral Journal" data-price="249" data-image="spiral.jpg">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="octane1.jpg" alt="Pen 1" class="product-image">
+                <h3 class="product-name">Elegant Pens</h3>
+                <p class="product-description">Smooth writing for every occasion.</p>
+                <p class="product-price">₹99</p>
+                <button class="buy-button" data-name="Elegant Pens" data-price="99" data-image="octane1.jpg">Buy Now</button>
+            </div>
+        </div>
+    </section>
+    <section class="products-section">
+        <h2>Painting Items</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="youva drawingb.jpg" alt="Notebook 1" class="product-image">
+                <h3 class="product-name">Creative </h3>
+                <p class="product-description">Perfect for students and professionals.</p>
+                <p class="product-price">₹299</p>
+                <button class="buy-button" data-name="Drawing" data-price="299" data-image="youva drawingb.jpg">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="youva brushes.jpg" alt="Notebook 1" class="product-image">
+                <h3 class="product-name">Blush with Us</h3>
+                <p class="product-description">Keep track of your daily tasks with ease.</p>
+                <p class="product-price">₹249</p>
+                <button class="buy-button" data-name="Youva" data-price="249" data-image="youva brushes.jpg">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="camlin paint.jpg" alt="Notebook 1" class="product-image">
+                <h3 class="product-name">Stylish Colours</h3>
+                <p class="product-description">Smooth writing for every occasion.</p>
+                <p class="product-price">₹199</p>
+                <button class="buy-button" data-name="camlinWater" data-price="99" data-image="camlin paint.jpg">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="product-container">
+            <div class="product-card">
+                <img src="imag\50pcsdoms.jpg" alt="Notebook 1" class="product-image">
+                <h3 class="product-name">Creative </h3>
+                <p class="product-description">Perfect for students and professionals.</p>
+                <p class="product-price">₹299</p>
+                <button class="buy-button" data-name="Creative" data-price="299" data-image="imag\50pcsdoms.jpg">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="imag\youvaoil.jpg" alt="Notebook 1" class="product-image">
+                <h3 class="product-name">Blush with Us</h3>
+                <p class="product-description">Keep track of your daily tasks with ease.</p>
+                <p class="product-price">₹249</p>
+                <button class="buy-button" data-name="Blush with Us" data-price="249" data-image="imag\youvaoil.jpg">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="imag\camlinoil.jpg" alt="Notebook 1" class="product-image">
+                <h3 class="product-name">Stylish Colours</h3>
+                <p class="product-description">Smooth writing for every occasion.</p>
+                <p class="product-price">₹199</p>
+                <button class="buy-button" data-name="Stylish Colours" data-price="99" data-image="imag\camlinoil.jpg">Buy Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="tubes paints.jpg" alt="Notebook 1" class="product-image">
+                <h3 class="product-name">Stylish Colours</h3>
+                <p class="product-description">Smooth writing for every occasion.</p>
+                <p class="product-price">₹199</p>
+                <button class="buy-button" data-name="Stylish Colours" data-price="99" data-image="tubes paints.jpg">Buy Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="paint.jpg" alt="Notebook 1" class="product-image" >
+                <h3 class="product-name">Blush with Us</h3>
+                <p class="product-description">Keep track of your daily tasks with ease.</p>
+                <p class="product-price">₹249</p>
+                <button class="buy-button" data-name="Blush with Us" data-price="249" data-image="painting boards.jpg">Buy Now</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="camlin1water.jpg" alt="Notebook 1" class="product-image">
+                <h3 class="product-name">Stylish Colours</h3>
+                <p class="product-description">Smooth writing for every occasion.</p>
+                <p class="product-price">₹199</p>
+                <button class="buy-button" data-name="Stylish Colours" data-price="99" data-image="camlin1water.jpg">Buy Now</button>
+            </div>
+
+            <section class="products-section">
+                <h2>A4 Sheets and Diary</h2>
+                <div class="product-container">
+                    <div class="product-card">
+                        <img src="A4.jpg" alt="Notebook 1" class="product-image">
+                        <h3 class="product-name">Creative </h3>
+                        <p class="product-description">Perfect for students and professionals.</p>
+                        <p class="product-price">₹299</p>
+                        <button class="buy-button" data-name="Drawing" data-price="299" data-image="A4.jpg">Buy Now</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="A4red.jpg" alt="Notebook 1" class="product-image">
+                        <h3 class="product-name">Blush with Us</h3>
+                        <p class="product-description">Keep track of your daily tasks with ease.</p>
+                        <p class="product-price">₹249</p>
+                        <button class="buy-button" data-name="Youva" data-price="249" data-image="A4red.jpg">Buy Now</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="diaries.jpg" alt="Notebook 1" class="product-image">
+                        <h3 class="product-name">Stylish Colours</h3>
+                        <p class="product-description">Smooth writing for every occasion.</p>
+                        <p class="product-price">₹199</p>
+                        <button class="buy-button" data-name="camlinWater" data-price="99" data-image="diaries.jpg">Buy Now</button>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </section>
+    <script src="product.js"></script>
+</body>
+</html>

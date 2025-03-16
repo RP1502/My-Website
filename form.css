@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /*  
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);*/
+  background: url('ginkgo-leaf-frame-design-colorful-background_53876-120237.avif') no-repeat center center/cover;
+  color: #fff;
+}
+
+/* Login Container */
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box; /* Prevents width issues */
+}
+
+/* Login Form */
+.login-form h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #4bb0e2;
+}
+
+.login-form p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #2f2727;
+}
+
+.input-box {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box; /* Ensures proper width */
+}
+
+.input-box input::placeholder {
+  color: #aaa;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+}
+
+/* Options Links */
+.options {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.options a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.options a:hover {
+  color: #2575fc;
+}
+
+/* Back Button */
+.back-button {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #5980c3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.back-button .arrow {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.back-button:hover {
+  background-color: #1a5bbd;
+}

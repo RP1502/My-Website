@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        
+        <div class="cart-items">
+            <!-- Example Cart Item 1 
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100" alt="Product Image" class="product-image">
+                <div class="product-details">
+                    <h2 class="product-name">Product Name 1</h2>
+                    <p class="product-price">20.00</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" data-action="decrease">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="quantity-btn" data-action="increase">+</button>
+                    </div>
+                </div>
+                <p class="item-total">20.00</p>
+                <button class="remove-item">Remove</button>
+            </div> -->
+
+            <!-- Example Cart Item 2 -->
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100" alt="Product Image" class="product-image">
+                <div class="product-details">
+                    <h2 class="product-name">Product Name 2</h2>
+                    <p class="product-price"></p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" data-action="decrease">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="quantity-btn" data-action="increase">+</button>
+                    </div>
+                </div>
+                <p class="item-total"></p>
+                <button class="remove-item">Remove</button>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <h2>Order Summary</h2>
+            <p class="summary-label">Subtotal:</p>
+            <p id="subtotal"></p>
+            <p class="summary-label">Total:</p>
+            <p id="total"></p>
+        </div>
+
+        <form>
+            <label>
+                <input type="radio" name="payment" value="qr" onclick="toggleCheckout(true)"> Pay via QR
+            </label><br>
+    
+            <label>
+                <input type="radio" name="payment" value="cod" onclick="toggleCheckout(false)"> Cash on Delivery
+            </label><br>
+
+            <a href="QR.html" id="checkout-btn" class="checkout-btn" style="display: none;">Proceed to Pay</a>
+           
+           <a href="invoice.html"><p id="cod-message" style="display: none;">You have selected Cash on Delivery.</p></a> 
+        </form>
+    </div>
+
+    <script src="cart.js"></script>
+    <script>
+        function toggleCheckout(isQR) {
+            const checkoutBtn = document.getElementById("checkout-btn");
+            const codMessage = document.getElementById("cod-message");
+
+            if (isQR) {
+                checkoutBtn.style.display = "inline-block";  // Show the button for QR
+                codMessage.style.display = "none";          // Hide COD message
+            } else {
+                checkoutBtn.style.display = "none";         // Hide the checkout button
+                codMessage.style.display = "block";        // Show COD message
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+

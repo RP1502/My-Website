@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        document.getElementById("product-name").innerText = getQueryParam("name");
+        document.getElementById("product-description").innerText = getQueryParam("description");
+        document.getElementById("product-price").innerText = "₹" + getQueryParam("price");
+        document.getElementById("product-image").src = getQueryParam("image");
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #457ce1 0%, #2a5298 100%);
+        }
+        .product-container {
+            display: flex;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            max-width: 850px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-container:hover {
+            transform: scale(1.02);
+        }
+        .product-image {
+            width: 320px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .product-info {
+            margin-left: 25px;
+            color: white;
+        }
+        .product-info h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .author {
+            color: #f0e6ff;
+            font-style: italic;
+        }
+        .description {
+            margin: 12px 0;
+            color: #f1f1f1;
+            font-weight: 300;
+        }
+        .price {
+            font-weight: bold;
+            color: #ffdd57;
+            font-size: 22px;
+            margin: 10px 0;
+        }
+        .buy-now {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 22px;
+            border: none;
+            cursor: pointer;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .buy-now:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <img src="book.jpg" alt="Book Image" class="product-image">
+        <div class="product-info">
+            <h1>Book Title</h1>
+            <p class="author">by Author Name</p>
+            <p class="description">An engaging description of the book, detailing its highlights, themes, and significance.</p>
+            <p class="price">Price: $XX.XX</p>
+            <button class="buy-now">Buy Now</button>
+        </div>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="invoice.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <form id="invoice-form">
+        <div class="invoice-container">
+            <div class="invoice-header">
+                <h1>BookWorm Invoice</h1>
+                <p>Invoice No: <span id="invoice-id"></span></p>
+                <p>Date: <span id="invoice-date"></span></p>
+            </div>
+
+            <div class="customer-info">
+                <h2>Customer Details</h2>
+                <input type="text" id="customer-name" placeholder="Customer Name" required>
+                <input type="text" id="customer-address" placeholder="Customer Address" required>
+                <input type="text" id="Phone-number" placeholder="PHONE " required>
+            </div>
+
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="invoice-items">
+                    <!-- Items will be added here dynamically -->
+                </tbody>
+            </table>
+
+            <div class="invoice-summary">
+                <p><strong>Subtotal:</strong> <span id="subtotal"></span></p>
+                <p><strong>Discount (10%):</strong> <span id="discount"></span></p>
+                <p><strong>Subtotal After Discount:</strong> <span id="subtotal-after-discount"></span></p>
+                <p><strong>Tax (3%):</strong> <span id="tax"></span></p>
+                <p><strong>Total Amount:</strong> <span id="total-amount"></span></p>
+            </div>
+
+            <!-- Submit button to trigger form validation -->
+            <button type="submit" class="print-btn">Print Invoice</button>
+        </div>
+    </form>
+
+<script src="invoice.js"></script>
+</body>
+</html>
